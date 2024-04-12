@@ -1,0 +1,20 @@
+---
+import LandingHeader from "../components/LandingHeader.astro";
+import Layout from "../layouts/Layout.astro";
+import HomeLanding from "../components/HomeLanding.astro";
+import Bento from "../components/Bento.astro";
+---
+
+<Layout title="MotionLab">
+  <LandingHeader />
+  <main
+    class="snap-y snap-mandatory relative w-full h-screen overflow-auto"
+  >
+    <div class="snap-center">
+      <HomeLanding />
+    </div>
+    <div class=" bg-slate-700">
+      <Bento />
+    </div>
+  </main>
+</Layout>

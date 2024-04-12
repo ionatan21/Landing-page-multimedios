@@ -1,0 +1,48 @@
+<header class="py-3 flex fixed top-0 w-full justify-center z-40 text-white">
+  <section
+  id="NavSection"
+    class="py-1 px-10 rounded-2xl w-9/12 flex items-center justify-between bg-black/20 backdrop-blur-md"
+  >
+    <div class="flex flex-grow basis-0 cursor-pointer">
+      <a href="#Home">MotionLab</a>
+    </div>
+
+    <nav id="navMenu">
+      <ul
+        class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 text-center"
+      >
+        <li class="hover:scale-105"><a href="#Tools">Herramientas</a></li>
+        <li class="hover:scale-105"><a href="#">Recursos</a></li>
+        <li class="hover:scale-105"><a href="#">Proyectos</a></li>
+        <li class="hover:scale-105"><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <nav class="flex flex-grow basis-0 justify-end">
+      <ul
+        class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+      >
+        <li class="hover:scale-105"><a class="User"></a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+
+<style>
+  .User{
+    background-image: url("/bars-solid.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+  #navMenu {
+    display: none; /* Oculta el elemento nav */
+  }
+
+  #NavSection{
+    width: 95%;
+  }
+}
+</style>

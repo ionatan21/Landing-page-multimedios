@@ -1,0 +1,115 @@
+---
+import BentoItem from "./BentoItem.astro";
+
+---
+
+<section
+  id="Tools"
+  class="snap-y snap-mandatory w-full max-w-[1400px] md:px-10 md:py-16 grid grid-cols-10 md:auto-rows-[35rem] auto-rows-[55rem] gap-4 mx-auto bg-slate-800"
+>
+  <BentoItem title="Blender" class="col-span-10 md:col-span-4 snap-center ">
+    <section
+    class="absolute top-0 bottom-0 group-hover:scale-110 transition-transform duration-1000 "
+    slot="background"
+  >
+    <video
+      id="blenderVideo"
+      autoplay
+      muted
+      loop
+      src="https://res.cloudinary.com/ds8cp2nxp/video/upload/v1712945933/VIdeos/Blender_uwosge.webm"
+      class="w-screen h-full object-cover z-0 "
+    ></video>
+  </section>
+
+
+    <p slot="content" class="max-w-xl text-white z-10">
+      Amplia gama de herramientas para modelado 3D, animación y
+      renderizado.
+    </p>
+  </BentoItem>
+
+  <BentoItem title="Cinema 4D" class="col-span-10 md:col-span-6 snap-center">
+
+    <section
+    class="absolute top-0 bottom-0 group-hover:scale-110 transition-transform duration-1000"
+    slot="background"
+  >
+    <video
+      id="Cinema"
+      autoplay
+      muted
+      loop
+      src="https://res.cloudinary.com/ds8cp2nxp/video/upload/v1712945921/VIdeos/Cinema_i3xucp.webm"
+      class="w-screen h-full object-cover object-center z-0"></video>
+  </section>
+
+    <p slot="content" class="max-w-xl text-white z-10">
+      Herramientas avanzadas para el modelado 3D, la animación y la
+      simulación de movimiento.
+    </p>
+  </BentoItem>
+  <BentoItem title="Houdini" class="col-span-10 md:col-span-6 snap-center">
+    <section
+    class="absolute top-0 bottom-0 group-hover:scale-110 transition-transform duration-1000"
+    slot="background"
+  >
+    <video
+    id="Houdini"
+    autoplay
+    muted
+    loop
+    src="https://res.cloudinary.com/ds8cp2nxp/video/upload/v1712945918/VIdeos/Houdini_cdydrj.webm"
+    class="w-screen h-full object-fill z-0"></video>
+</section>
+
+    <p slot="content" class="max-w-xl text-white z-10">
+      Su enfoque procedural y node-based le da a los artistas un control preciso
+      sobre cada aspecto de su trabajo.
+    </p>
+  </BentoItem>
+  <BentoItem title="Nuke" class="col-span-10 md:col-span-4 snap-center">
+    <section class="absolute top-0 bottom-0" slot="background">
+      <video
+        id="nukeVideo"
+        autoplay
+        muted
+        loop
+        src="https://res.cloudinary.com/ds8cp2nxp/video/upload/v1712952550/VIdeos/Nuke_pxm1h6.webm"
+        class="w-screen h-full object-cover z-0"></video>
+    </section>
+
+    <p slot="content" class="max-w-xl text-white z-10">
+      Flujo de trabajo flexible y poderoso para
+      la creación y manipulación de imágenes.
+    </p>
+  </BentoItem>
+</section>
+
+<script>
+  
+
+    function handleVideoHover(videoId) {
+      const video = document.getElementById(videoId) as HTMLVideoElement;
+      if (video) {
+        video.pause(); // Pausar el video al cargar la página
+  
+        // Reproducir el video al hacer hover
+        video.parentElement?.addEventListener("mouseover", function () {
+          video.play();
+        });
+  
+        // Pausar el video al quitar el hover
+        video.parentElement?.addEventListener("mouseleave", function () {
+          video.pause();
+        });
+      }
+    }
+  
+    // Llamar a la función para cada video
+    handleVideoHover("blenderVideo");
+    handleVideoHover("nukeVideo");
+    handleVideoHover("Cinema");
+    handleVideoHover("Houdini");
+    // Agrega más llamadas a handleVideoHover para cada video que tengas
+  </script>

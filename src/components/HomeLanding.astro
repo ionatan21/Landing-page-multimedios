@@ -1,0 +1,117 @@
+<section
+id="Home"
+  class="flex justify-center bg-black h-screen w-screen text-center overflow-hidden relative"
+>
+  <div class="z-30 relative h-full flex flex-col">
+    <header class="glitch ">
+      <span aria-hidden="true" class="text-white pt-40 text-[50px] font-medium"
+        >3D/VFX</span
+      >
+      <h2 class="text-white pt-40 text-[50px] font-medium">3D/VFX</h2>
+      <span aria-hidden="true" class="text-white pt-40 text-[50px] font-medium"
+        >3D/VFX</span
+      >
+    </header>
+    <p class="text-white text-sm animate-blurred-fade-in">Desarrolla animaciones 3D</p>
+    <footer class="md:pb-5 flex flex-col flex-grow justify-end pb-16 animate-fade-in-up">
+      <a
+        class="main-footer border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors "
+        href="#"
+      >
+        Empieza hoy</a
+      >
+    </footer>
+  </div>
+
+  <section class="absolute top-0 bottom-0">
+    <video
+      autoplay
+      muted
+      loop
+      src="https://res.cloudinary.com/ds8cp2nxp/video/upload/v1712945927/VIdeos/Background_ig5ott.webm"
+      class="scale-120 h-screen object-cover overflow-hidden"></video>
+  </section>
+
+  <style>
+
+    .main-footer{
+      animation: pulsing 2s infinite;
+    }
+    .glitch {
+      font-size: 5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+      text-shadow:
+        0.05em 0 0 #00fffc,
+        -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+      animation: glitch 725ms infinite, blurred-fade-in 0.9s ease-in-out both;
+    }
+
+    .glitch span {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .glitch span:first-child {
+      animation: glitch 500ms infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      transform: translate(-0.04em, -0.03em);
+      opacity: 0.75;
+    }
+
+    .glitch span:last-child {
+      animation: glitch 375ms infinite;
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      transform: translate(0.04em, 0.03em);
+      opacity: 0.75;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow:
+          0.05em 0 0 #00fffc,
+          -0.03em -0.04em 0 #fc00ff,
+          0.025em 0.04em 0 #fffc00;
+      }
+      15% {
+        text-shadow:
+          0.05em 0 0 #00fffc,
+          -0.03em -0.04em 0 #fc00ff,
+          0.025em 0.04em 0 #fffc00;
+      }
+      16% {
+        text-shadow:
+          -0.05em -0.025em 0 #00fffc,
+          0.025em 0.035em 0 #fc00ff,
+          -0.05em -0.05em 0 #fffc00;
+      }
+      49% {
+        text-shadow:
+          -0.05em -0.025em 0 #00fffc,
+          0.025em 0.035em 0 #fc00ff,
+          -0.05em -0.05em 0 #fffc00;
+      }
+      50% {
+        text-shadow:
+          0.05em 0.035em 0 #00fffc,
+          0.03em 0 0 #fc00ff,
+          0 -0.04em 0 #fffc00;
+      }
+      99% {
+        text-shadow:
+          0.05em 0.035em 0 #00fffc,
+          0.03em 0 0 #fc00ff,
+          0 -0.04em 0 #fffc00;
+      }
+      100% {
+        text-shadow:
+          -0.05em 0 0 #00fffc,
+          -0.025em -0.04em 0 #fc00ff,
+          -0.04em -0.025em 0 #fffc00;
+      }
+    }
+  </style>
+</section>
